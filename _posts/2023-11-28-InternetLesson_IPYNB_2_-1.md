@@ -4,7 +4,7 @@ comments: False
 layout: post
 title: Internet TeamTeach
 type: hacks
-courses: {'compsci': {'week': 3}}
+courses: {'compsci': {'week': 1}}
 ---
 
 ## Internet History Fun Facts
