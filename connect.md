@@ -1,3 +1,4 @@
+<script>
 const apiUrl = 'http://127.0.0.1:8086'; // Replace with the actual API URL
         // Make an HTTP GET request to the API
 fetch(apiUrl)
@@ -31,3 +32,4 @@ fetch(apiUrl)
         };
         // Now, you have the organized data in the "organizedData" dictionary
         Data = organizedData.Login_api.LoginAPI.get.data; //data[id].Login_name, image whatever u may need,
+</script>
