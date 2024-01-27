@@ -16,6 +16,10 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
     <br>
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
     <!-- Email -->
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
@@ -30,7 +34,7 @@
         // Get form data
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        var age = document.getElementById('age').value;
+        var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
 
         // Perform form data processing (e.g., send to PHP backend)
