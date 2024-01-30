@@ -20,9 +20,9 @@
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
     <br>
-    <!-- Email -->
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+    <!-- Date of Birth -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
     <br>
     <br>
     <!-- Submit Button -->
