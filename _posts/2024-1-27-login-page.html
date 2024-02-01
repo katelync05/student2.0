@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form action="" method="post">
+        <label for="uid">User ID:</label>
+        <input type="text" id="uid" name="uid" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <script>
+        async function submitForm() {
+            var username = document.getElementById('usernameField');
+            var password = document.getElementById('passwordField');
+            var form = document.getElementById('myForm');
+
+            try {
+                const apiUrl = "http://127.0.0.1:8086/login";
+                // const apiUrl = "http://127.0.0.1:5001/login"
+
+                // Get the form data
+                const formData = new FormData(form);
+                console.log(form)
+
+                // Send a POST request to your backend server
+                const loginResponse = await fetch(apiUrl, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'cors',
+                });
+
+                if (!loginResponse.ok) {
+                    throw new Error('Login request was not successful');
+                }
+
+                const loginData = await loginResponse.json();
+
+                if (loginData.success) {
+                    // Login was successful, you can redirect or perform any other action
+                    console.log('Login successful:', loginData.message);
+
+                    localStorage.setItem("usernameData", username.value);
+                    localStorage.setItem("flagData", 1);
+
+                    window.location.href = "./chat.html"
+                    window.location.replace("./chat.html")
+
+
+                } else {
+                    // Login failed, show an error message or take appropriate action
+                    console.error('Login failed:', loginData.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            submitForm();
+        });
+
+    </script>
+</div>
+</body>
+</html>
