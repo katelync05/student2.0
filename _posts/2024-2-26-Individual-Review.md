@@ -25,11 +25,13 @@ My role in our group was Frontend and Scrum Master. For our project, I did the s
 ![]({{ site.baseurl }}/images/blank.png "list")
 
 - At least one procedure that contributed to the program’s intended purpose where you have defined: the name, return type, one or more parameters:
-    - 
-![]({{ site.baseurl }}/images/.png)
+![]({{ site.baseurl }}/images/reiteration.png)
 
 - An algorithm that includes sequencing, selection, and iteration that is in the body of the selected procedure
-![]({{ site.baseurl }}/images/reiteration.png)
+    - sequencing
+    ![]({{ site.baseurl }}/images/sequencing.png)
+    - selection
+    ![]({{ site.baseurl }}/images/selection.png)
 
 - Calls to your student-developed procedure:
     - uses JSON to connect data and retrieves the bot's message from the backend
