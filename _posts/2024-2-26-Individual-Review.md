@@ -12,7 +12,7 @@ courses: { compsci: {week: 7} }
 As Ellie is an elite water polo player and Ishraq and I don't know much about the sport ourselves, we decided to make our project centered around teaching others about the sport. Our project allows users to ask questions about water polo to AI and stay updated on local games and player stats such as Del Norte's team. There is also a short quiz to test user's knowledge of the sport after exploring our site. 
 
 ## My feature 
-My role in our group was Frontend and Scrum Master. For our project, I did the styling, formatting, and performed fetch code for the homepage, AI feature, as well as the login/signup pages. A small feature that I added was also the water polo quiz. 
+My role in our group was Frontend and Scrum Master. For our project, I did the styling, formatting, and performed fetch code for the homepage, AI feature, as well as the login/signup pages. We came up with an outline of roughly what the site would look like and I followed it when creating the visuals. A small feature that I added was also the water polo quiz. 
 
 ![]({{ site.baseurl }}/images/planning.png)
 
@@ -34,7 +34,7 @@ Users must have admin in order to ensure that trust people can add game scores. 
 ![]({{ site.baseurl }}/images/signupcode.png)
 
 ## Quiz
-For fun, test their knowledge users can insert click on our quick quiz and see if they can remember the information they've learned. 
+For fun, test their knowledge users can insert click on our quick quiz and see if they can remember the information they've learned.If questions are missed they have the option to 'Try Again'.  
 ![]({{ site.baseurl }}/images/quiz.png)
 
 ## Commits 
